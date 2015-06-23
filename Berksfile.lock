@@ -1,0 +1,139 @@
+DEPENDENCIES
+  cb-platform
+    git: git@github.com:caringbridge/cb-platform.git
+    revision: e1549b0e2c34bb041efae14a8c4ccb03c1ac76e5
+  role-mongodb-configserver
+    git: git@github.com:caringbridge/role-mongodb-configserver.git
+    revision: 49f26779a67b4107eb2925f66e06a2e9f8d7a78c
+  role-mongodb-mongos
+    git: git@github.com:caringbridge/role-mongodb-mongos.git
+    revision: 0b7f8c1c9a7671809aba4cd103235710867237c1
+  role-mongodb-replicaset1
+    git: git@github.com:svanzee4cb/role-mongodb-replicaset1.git
+    revision: 5a00119790464f557b4a08f0da7a77e2ffb1aa80
+  role-mongodb-replicaset2
+    git: git@github.com:svanzee4cb/role-mongodb-replicaset2.git
+    revision: 462b5bd8cd9eaf6618e86cda6ca16e11bae2be2b
+  role-mongodb-shard1
+    git: git@github.com:caringbridge/role-mongodb-shard1.git
+    revision: cb9c74baba75ce7e8f08a00c3bf58f557186d4bb
+  role-mongodb-shard2
+    git: git@github.com:caringbridge/role-mongodb-shard2.git
+    revision: 1e71dbebf09a1623f123bf8c2b97b6514709ad62
+  role-rabbitmq
+    git: git@github.com:caringbridge/role-rabbitmq.git
+    revision: 30de6ba234b251b39c23df5512253a291645e540
+  role-sphinx
+    git: git@github.com:caringbridge/role-sphinx.git
+    revision: e1450ab206812284c25464629ff8dc7bd9a28ec7
+  role-twemcache
+    git: git@github.com:caringbridge/role-twemcache.git
+    revision: fff514834f58ab13b9c11839827b8a10a5a7c5b2
+  role-zendserver
+    git: git@github.com:caringbridge/role-zendserver.git
+    revision: a60958f2d4c26375985d9abaac66b351323e0558
+  se-hostfile
+    git: git@github.com:caringbridge/se-hostfile.git
+    revision: fb267add5d6697e081874fd3a2052d91358bc0d9
+  se-yum
+    git: git@github.com:caringbridge/se-yum.git
+    revision: 93b4c426d6447a6fefffad1604be3e5966f93d87
+  smf (= 2.2.1)
+
+GRAPH
+  apt (2.6.1)
+  build-essential (2.1.3)
+  cb-platform (0.1.0)
+    hostsfile (>= 0.0.0)
+  chef-sugar (2.5.0)
+  erlang (1.5.7)
+    apt (>= 1.7.0)
+    build-essential (>= 0.0.0)
+    yum (~> 3.0)
+    yum-epel (>= 0.0.0)
+    yum-erlang_solutions (>= 0.0.0)
+  hostsfile (2.4.5)
+  mongodb (0.16.1)
+    apt (>= 1.8.2)
+    python (>= 0.0.0)
+    runit (>= 1.5.0)
+    yum (>= 3.0)
+  mysql (6.0.16)
+    smf (>= 0.0.0)
+    yum-mysql-community (>= 0.0.0)
+  openssl (4.0.0)
+    chef-sugar (>= 0.0.0)
+  percona (0.15.4)
+    apt (>= 1.9)
+    openssl (>= 0.0.0)
+    yum (~> 3.0)
+  postgresql (3.4.18)
+    apt (>= 1.9.0)
+    build-essential (>= 0.0.0)
+    openssl (~> 4.0.0)
+  python (1.4.6)
+    build-essential (>= 0.0.0)
+    yum-epel (>= 0.0.0)
+  rabbitmq (3.11.0)
+    erlang (>= 0.9)
+    yum-epel (>= 0.0.0)
+    yum-erlang_solutions (>= 0.0.0)
+  rbac (1.0.2)
+  resource-control (0.1.1)
+  role-mongodb-configserver (0.1.0)
+    mongodb (= 0.16.1)
+    yum (>= 0.0.0)
+  role-mongodb-mongos (0.1.2)
+    mongodb (= 0.16.1)
+    yum (>= 0.0.0)
+  role-mongodb-replicaset1 (0.1.0)
+    mongodb (= 0.16.1)
+    yum (>= 0.0.0)
+  role-mongodb-replicaset2 (0.1.0)
+    mongodb (= 0.16.1)
+    yum (>= 0.0.0)
+  role-mongodb-shard1 (0.1.1)
+    mongodb (= 0.16.1)
+    yum (>= 0.0.0)
+  role-mongodb-shard2 (0.1.1)
+    mongodb (= 0.16.1)
+    yum (>= 0.0.0)
+  role-rabbitmq (0.1.0)
+    rabbitmq (>= 0.0.0)
+  role-sphinx (0.1.1)
+    sphinx (>= 0.0.0)
+    yum-epel (>= 0.0.0)
+  role-twemcache (0.1.0)
+  role-zendserver (0.1.3)
+    yum (>= 0.0.0)
+    yum-epel (>= 0.0.0)
+    zendserver (~> 1.1.1)
+  runit (1.5.16)
+    build-essential (>= 0.0.0)
+    yum (~> 3.0)
+    yum-epel (>= 0.0.0)
+  se-hostfile (0.1.0)
+    hostsfile (>= 0.0.0)
+  se-yum (0.1.0)
+    yum (>= 0.0.0)
+  smf (2.2.1)
+    rbac (>= 1.0.1)
+    resource-control (>= 0.0.0)
+  sphinx (1.1.0)
+    apt (>= 0.0.0)
+    build-essential (>= 1.1.2)
+    mysql (>= 0.0.0)
+    percona (>= 0.0.0)
+    postgresql (>= 1.0.0)
+    yum (>= 0.0.0)
+    yum-epel (>= 0.0.0)
+  yum (3.5.3)
+  yum-epel (0.6.0)
+    yum (~> 3.0)
+  yum-erlang_solutions (0.2.0)
+    yum (~> 3.0)
+  yum-mysql-community (0.1.13)
+    yum (>= 3.0)
+  zendserver (1.1.4)
+    apt (>= 0.0.0)
+    yum (>= 0.0.0)
