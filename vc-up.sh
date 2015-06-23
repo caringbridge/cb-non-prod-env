@@ -1,3 +1,7 @@
 #!/bin/bash
 
-vagrant up configserver && vagrant up shard1 && vagrant provision shard1 && vagrant up shard2 && vagrant provision shard2 && vagrant up mongos-zend
+env_ver=$(awk -F"[/']"" '/ env_ver/ {print $2}' Vagrantfile)
+
+echo  "Starting environement: $env_ver"
+
+vagrant up cfgsvr-$env_ver && vagrant up s1-$env_ver && vagrant provision s1-$env_ver && vagrant up s2-$env_ver && vagrant provision s2-$env_ver && vagrant up zend-$env_ver

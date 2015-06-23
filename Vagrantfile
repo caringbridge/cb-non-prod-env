@@ -146,7 +146,7 @@ Vagrant.configure('2') do |config|
     mongos.vm.box_url = 'http://sun4600.cbeagan.org/centos-chef.box'
 
     # Set up network configuration
-    mongos.vm.network :public_network, ip: "#{zend_IP}", bridge: 'br0'
+    mongos.vm.network :public_network, ip: "#{zend_ip}", bridge: 'br0'
 
     # This is a work around line for the default route this needs to be fixed
     # You must run vagrant reload --provision to keep the default route working
